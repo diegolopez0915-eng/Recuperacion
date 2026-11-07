@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Aprende a programar desde cero con un tutor de IA: algoritmos, variables, condicionales, ciclos, funciones y depuración, con ejemplos salvadoreños.">
+<title>CodeMentor IA · Aprende programación con tu tutor de IA</title>
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<!-- Fuentes -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Estilos propios -->
+<link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Barra de progreso de scroll -->
+<div id="scroll-progress"></div>
+
+<!-- Fondo animado -->
+<div class="bg-fx" aria-hidden="true">
+  <div class="grid-bg"></div>
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+</div>
+
+<!-- =================== NAVBAR =================== -->
+<nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#hero">
+      <span class="brand-mark">&lt;/&gt;</span>
+      <span class="brand-txt">CodeMentor<span class="brand-ia">IA</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-label="Menú">
+      <i class="bi bi-list"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navContent">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#que-es">01 · Programar</a></li>
+        <li class="nav-item"><a class="nav-link" href="#variables">02 · Variables</a></li>
+        <li class="nav-item"><a class="nav-link" href="#control">03 · Control</a></li>
+        <li class="nav-item"><a class="nav-link" href="#funciones">04 · Funciones</a></li>
+        <li class="nav-item"><a class="nav-link" href="#practica">Práctica</a></li>
+        <li class="nav-item ms-lg-2"><a class="nav-cta" href="#" id="nav-chat"><i class="bi bi-robot"></i> Tutor IA</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- =================== HERO =================== -->
+<header id="hero" class="hero">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <span class="hero-pill reveal"><span class="pulse-dot"></span> Recuperación 3DS «B» · Proyecto 2</span>
+        <h1 class="hero-title reveal">
+          Aprende a <span class="grad-text" id="typing-word">programar</span><span class="cursor-blink">_</span>
+        </h1>
+        <p class="hero-sub reveal">
+          Un profe de IA con paciencia infinita que te enseña a programar desde cero:
+          algoritmos, variables, condicionales, ciclos y cómo cazar errores. Con ejemplos
+          bien salvadoreños 🇸🇻
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#que-es" class="btn btn-glow"><i class="bi bi-rocket-takeoff me-2"></i>Empezar a aprender</a>
+          <a href="#" id="hero-chat" class="btn btn-ghost"><i class="bi bi-chat-dots me-2"></i>Hablar con el tutor</a>
+        </div>
+        <div class="hero-stats reveal">
+          <div class="stat"><span class="stat-num" data-count="4">0</span><span class="stat-lbl">lenguajes</span></div>
+          <div class="stat-div"></div>
+          <div class="stat"><span class="stat-num" data-count="5">0</span><span class="stat-lbl">retos de quiz</span></div>
+          <div class="stat-div"></div>
+          <div class="stat"><span class="stat-num">24/7</span><span class="stat-lbl">tutor activo</span></div>
+        </div>
+      </div>
+
+      <!-- Ventana de editor animada -->
+      <div class="col-lg-6">
+        <div class="editor reveal" data-delay="120">
+          <div class="editor-bar">
+            <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+            <span class="editor-file">mi_primer_programa.py</span>
+          </div>
+          <div class="editor-body">
+            <pre class="code"><code><span class="ln">1</span><span class="cm"># Mi primera venta en la pupusería</span>
+<span class="ln">2</span><span class="kw">def</span> <span class="fn">cobrar</span>(pupusas, precio):
+<span class="ln">3</span>    total = pupusas * precio
+<span class="ln">4</span>    <span class="kw">if</span> total &gt; <span class="nm">5</span>:
+<span class="ln">5</span>        <span class="kw">return</span> <span class="st">"¡Combo grande! 🥟"</span>
+<span class="ln">6</span>    <span class="kw">return</span> <span class="st">f"Pagas ${total}"</span>
+<span class="ln">7</span>
+<span class="ln">8</span><span class="bi2">print</span>(<span class="fn">cobrar</span>(<span class="nm">4</span>, <span class="nm">0.50</span>))
+<span class="ln">9</span><span class="out">&gt;&gt;&gt; Pagas $2.0</span></code></pre>
+          </div>
+          <div class="editor-foot">
+            <span><i class="bi bi-check-circle-fill"></i> Sin errores</span>
+            <span class="ms-auto">Python 3 · UTF-8</span>
+          </div>
+        </div>
+        <span class="float-chip chip-py">Python</span>
+        <span class="float-chip chip-cs">C#</span>
+        <span class="float-chip chip-php">PHP</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- =================== S1 · QUÉ ES PROGRAMAR =================== -->
+<section id="que-es" class="section">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-tag">01 / Fundamentos</span>
+      <h2 class="sec-title">¿Qué es programar y qué es un algoritmo?</h2>
+      <p class="sec-lead">Programar es darle órdenes a la computadora, paso a paso, para que resuelva un problema. Esa lista de pasos ordenados se llama <b>algoritmo</b>.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-6 reveal">
+        <div class="card-glass h-100">
+          <div class="card-ic"><i class="bi bi-list-ol"></i></div>
+          <h3>Un algoritmo es como una receta</h3>
+          <p>Igual que la receta de las pupusas: si cambias el orden de los pasos, el resultado sale mal. La computadora hace <b>exactamente</b> lo que le dices, en el orden que le dices.</p>
+          <div class="recipe">
+            <div class="recipe-step"><span>1</span> Agarrar la masa</div>
+            <div class="recipe-step"><span>2</span> Rellenar de queso</div>
+            <div class="recipe-step"><span>3</span> Aplastar y dar forma</div>
+            <div class="recipe-step"><span>4</span> Cocinar en el comal</div>
+          </div>
+          <p class="mini-note"><i class="bi bi-lightbulb"></i> Si pones «cocinar» antes de «rellenar», la pupusa sale cruda por dentro. ¡El orden importa!</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6 reveal" data-delay="90">
+        <div class="card-glass h-100">
+          <div class="card-ic alt"><i class="bi bi-translate"></i></div>
+          <h3>Los lenguajes son los idiomas</h3>
+          <p>A la computadora le hablamos en «lenguajes de programación». Cada uno sirve para cosas distintas, pero todos dan órdenes:</p>
+          <ul class="lang-list">
+            <li><span class="lg py">Python</span> Fácil de leer, ideal para empezar.</li>
+            <li><span class="lg cs">C#</span> Apps de escritorio y videojuegos (Unity).</li>
+            <li><span class="lg php">PHP</span> Páginas web y sistemas en el servidor.</li>
+            <li><span class="lg web">Web</span> HTML, CSS y JavaScript para el navegador.</li>
+          </ul>
+          <p class="mini-note"><i class="bi bi-translate"></i> Como el español y el inglés: distintas palabras, pero la idea de «dar órdenes» es la misma.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== S2 · VARIABLES =================== -->
+<section id="variables" class="section section-alt">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-tag">02 / Datos</span>
+      <h2 class="sec-title">Variables y tipos de datos</h2>
+      <p class="sec-lead">Una <b>variable</b> es una cajita con nombre donde guardas un dato para usarlo después. El <b>tipo de dato</b> dice qué clase de información guarda esa cajita.</p>
+    </div>
+
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-5 reveal">
+        <div class="boxes">
+          <div class="var-box">
+            <span class="var-name">precio_pupusa</span>
+            <span class="var-val">0.50</span>
+            <span class="var-type num">número</span>
+          </div>
+          <div class="var-box">
+            <span class="var-name">cliente</span>
+            <span class="var-val">"Doña María"</span>
+            <span class="var-type str">texto</span>
+          </div>
+          <div class="var-box">
+            <span class="var-name">pago_completo</span>
+            <span class="var-val">True</span>
+            <span class="var-type bool">booleano</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7 reveal" data-delay="90">
+        <div class="card-glass">
+          <h3>Los 4 tipos que más vas a usar</h3>
+          <div class="type-grid">
+            <div class="type-item"><span class="type-ic num">123</span><div><b>Enteros y decimales</b><small>Cantidades y precios: <code>8</code>, <code>0.50</code></small></div></div>
+            <div class="type-item"><span class="type-ic str">""</span><div><b>Texto (string)</b><small>Nombres y mensajes: <code>"Pupusería La Ceiba"</code></small></div></div>
+            <div class="type-item"><span class="type-ic bool">T/F</span><div><b>Booleano</b><small>Verdadero o falso: <code>True</code> / <code>False</code></small></div></div>
+            <div class="type-item"><span class="type-ic list">[ ]</span><div><b>Listas</b><small>Varios datos juntos: <code>["queso","frijol","revuelta"]</code></small></div></div>
+          </div>
+          <div class="code-inline">
+            <code><span class="cm"># Guardamos datos de una venta</span><br>
+            precio = <span class="nm">0.50</span>  <span class="cm"># decimal</span><br>
+            cliente = <span class="st">"Doña María"</span>  <span class="cm"># texto</span><br>
+            pagado = <span class="kw">True</span>  <span class="cm"># booleano</span></code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== S3 · CONTROL (if / for / while) =================== -->
+<section id="control" class="section">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-tag">03 / Lógica</span>
+      <h2 class="sec-title">Condicionales y ciclos</h2>
+      <p class="sec-lead">Con los <b>condicionales</b> el programa toma decisiones; con los <b>ciclos</b> repite una tarea muchas veces sin que te canses de escribirla.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-6 reveal">
+        <div class="card-glass h-100">
+          <div class="card-ic"><i class="bi bi-signpost-split"></i></div>
+          <h3>if — tomar decisiones</h3>
+          <p>«Si pasa esto, haz aquello; si no, haz lo otro.» Igual que el cobrador del bus:</p>
+          <div class="code-inline">
+            <code><span class="kw">if</span> pasaje &gt;= <span class="nm">0.25</span>:<br>
+            &nbsp;&nbsp;<span class="bi2">print</span>(<span class="st">"Suba, pues 🚌"</span>)<br>
+            <span class="kw">else</span>:<br>
+            &nbsp;&nbsp;<span class="bi2">print</span>(<span class="st">"Le falta pisto 🙅"</span>)</code>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 reveal" data-delay="90">
+        <div class="card-glass h-100">
+          <div class="card-ic alt"><i class="bi bi-arrow-repeat"></i></div>
+          <h3>for y while — repetir</h3>
+          <p>Para no escribir lo mismo 100 veces. Por ejemplo, saludar a cada cliente de la fila:</p>
+          <div class="code-inline">
+            <code><span class="cm"># for: repite una cantidad conocida</span><br>
+            <span class="kw">for</span> cliente <span class="kw">in</span> fila:<br>
+            &nbsp;&nbsp;<span class="bi2">print</span>(<span class="st">"¡Buenas! ¿Qué va a llevar?"</span>)<br><br>
+            <span class="cm"># while: repite mientras se cumpla algo</span><br>
+            <span class="kw">while</span> hay_masa:<br>
+            &nbsp;&nbsp;hacer_pupusa()</code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="compare reveal" data-delay="120">
+      <div class="compare-col">
+        <span class="compare-h for"><i class="bi bi-123"></i> Usa <b>for</b> cuando…</span>
+        <p>Sabes cuántas veces repetir. Ej: «cobra a los 8 clientes de la fila».</p>
+      </div>
+      <div class="compare-col">
+        <span class="compare-h while"><i class="bi bi-infinity"></i> Usa <b>while</b> cuando…</span>
+        <p>Repites hasta que algo cambie. Ej: «sigue vendiendo mientras haya masa».</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== S4 · FUNCIONES Y DEPURAR =================== -->
+<section id="funciones" class="section section-alt">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-tag">04 / Orden</span>
+      <h2 class="sec-title">Funciones y cómo encontrar errores</h2>
+      <p class="sec-lead">Una <b>función</b> es un bloque de código con nombre que hace una tarea y lo puedes reutilizar. <b>Depurar</b> es buscar y arreglar los errores («bugs»).</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-6 reveal">
+        <div class="card-glass h-100">
+          <div class="card-ic"><i class="bi bi-box-seam"></i></div>
+          <h3>Funciones = tu máquina de pupusas</h3>
+          <p>La construyes una vez y la usas mil veces. Le das ingredientes (parámetros) y te devuelve algo (return).</p>
+          <div class="code-inline">
+            <code><span class="kw">def</span> <span class="fn">precio_combo</span>(cantidad):<br>
+            &nbsp;&nbsp;total = cantidad * <span class="nm">0.50</span><br>
+            &nbsp;&nbsp;<span class="kw">return</span> total<br><br>
+            <span class="cm"># La reutilizamos cuantas veces queramos</span><br>
+            <span class="bi2">print</span>(<span class="fn">precio_combo</span>(<span class="nm">3</span>))  <span class="cm"># 1.5</span><br>
+            <span class="bi2">print</span>(<span class="fn">precio_combo</span>(<span class="nm">8</span>))  <span class="cm"># 4.0</span></code>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 reveal" data-delay="90">
+        <div class="card-glass h-100">
+          <div class="card-ic alt"><i class="bi bi-bug"></i></div>
+          <h3>Depurar: caza de bugs 🐛</h3>
+          <p>Todos los programadores se equivocan. Lo importante es saber buscar el error:</p>
+          <ul class="debug-list">
+            <li><span>1</span> <b>Lee el mensaje de error.</b> Dice la línea y el tipo de fallo.</li>
+            <li><span>2</span> <b>Revisa esa línea.</b> ¿Falta un <code>:</code> o un paréntesis?</li>
+            <li><span>3</span> <b>Usa print().</b> Imprime variables para ver qué valor tienen.</li>
+            <li><span>4</span> <b>Prueba de a poco.</b> Cambia una cosa a la vez.</li>
+          </ul>
+          <p class="mini-note"><i class="bi bi-robot"></i> ¿Te traba un bug? Abajo tienes un reto «Arregla el error» con pistas de la IA.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== MINI PRÁCTICA =================== -->
+<section id="practica" class="section">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-tag">Mini práctica</span>
+      <h2 class="sec-title">¡Ponte a prueba!</h2>
+      <p class="sec-lead">Dos retos: arregla un programa con un error (la IA te da pistas por niveles) y responde el quiz de 5 preguntas.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Reto: arregla el error -->
+      <div class="col-lg-6 reveal">
+        <div class="practice-card h-100">
+          <div class="practice-head">
+            <i class="bi bi-bug-fill"></i>
+            <div><h3>Reto: arregla el error</h3><small>La IA te da pistas, no la respuesta regalada</small></div>
+          </div>
+          <p class="bug-intro">Este programa debería cobrar 4 pupusas a $0.50, pero tiene <b>un error</b>. ¿Puedes encontrarlo y escribir la versión corregida?</p>
+          <div class="editor mini">
+            <div class="editor-bar">
+              <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+              <span class="editor-file">cobro.py — ¡tiene un bug!</span>
+            </div>
+            <div class="editor-body">
+              <pre class="code"><code><span class="ln">1</span><span class="kw">def</span> <span class="fn">cobrar</span>(cantidad, precio)
+<span class="ln">2</span>    total = cantidad * precio
+<span class="ln">3</span>    <span class="kw">return</span> total
+<span class="ln">4</span>
+<span class="ln">5</span><span class="bi2">print</span>(<span class="fn">cobrar</span>(<span class="nm">4</span>, <span class="nm">0.50</span>))</code></pre>
+            </div>
+          </div>
+          <label class="field-lbl" for="fix-input">Escribe tu versión corregida (o explica qué está mal):</label>
+          <textarea id="fix-input" class="fix-area" rows="5" maxlength="600" placeholder="Pega aquí el código ya corregido..."></textarea>
+          <div class="field-row">
+            <span class="char-count"><span id="fix-count">0</span>/600</span>
+            <div class="d-flex gap-2">
+              <button id="btn-pista" class="btn btn-ghost btn-sm"><i class="bi bi-lightbulb me-1"></i>Dame una pista</button>
+              <button id="btn-revisar" class="btn btn-glow btn-sm"><i class="bi bi-check2-circle me-1"></i>Revisar con IA</button>
+            </div>
+          </div>
+          <div id="fix-result" class="fix-result"></div>
+        </div>
+      </div>
+
+      <!-- Quiz -->
+      <div class="col-lg-6 reveal" data-delay="90">
+        <div class="practice-card h-100">
+          <div class="practice-head">
+            <i class="bi bi-patch-question-fill"></i>
+            <div><h3>Quiz de 5 preguntas</h3><small>Comprueba lo que aprendiste</small></div>
+          </div>
+          <div id="quiz-box" class="quiz-box"><!-- lo llena quiz.js --></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== FOOTER =================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <a class="navbar-brand footer-brand" href="#hero">
+          <span class="brand-mark">&lt;/&gt;</span>
+          <span class="brand-txt">CodeMentor<span class="brand-ia">IA</span></span>
+        </a>
+        <p class="footer-txt">Página educativa con tutor de IA para aprender a programar desde cero, con ejemplos salvadoreños. Recuperación Extraordinaria 3DS «B».</p>
+      </div>
+      <div class="col-lg-3 col-6">
+        <h5>Secciones</h5>
+        <ul class="footer-links">
+          <li><a href="#que-es">¿Qué es programar?</a></li>
+          <li><a href="#variables">Variables</a></li>
+          <li><a href="#control">Condicionales y ciclos</a></li>
+          <li><a href="#funciones">Funciones y depurar</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-6">
+        <h5>Proyecto</h5>
+        <ul class="footer-links">
+          <li><i class="bi bi-mortarboard me-2"></i>INDEL · Cantón Lourdes</li>
+          <li><i class="bi bi-person-video3 me-2"></i>Prof. Javier Mineros</li>
+          <li><i class="bi bi-cpu me-2"></i>Tutor con Groq + IA</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> CodeMentor IA · Hecho con 💙 para aprender a programar</span>
+      <span class="mono">v1.0 · BTV Desarrollo de Software</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Volver arriba -->
+<button id="back-to-top" class="float-btn" aria-label="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<!-- =================== CHAT TUTOR =================== -->
+<button id="chat-toggle" class="chat-fab" aria-label="Abrir tutor de IA">
+  <i class="bi bi-robot"></i>
+  <span class="chat-fab-ring"></span>
+</button>
+
+<div id="chat-window" class="chat-window">
+  <div class="chat-header">
+    <div class="chat-id">
+      <span class="chat-avatar"><i class="bi bi-robot"></i></span>
+      <div>
+        <strong>Profe IA</strong>
+        <small><span class="online-dot"></span> en línea · tutor de programación</small>
+      </div>
+    </div>
+    <button id="chat-close" class="chat-close" aria-label="Cerrar"><i class="bi bi-x-lg"></i></button>
+  </div>
+  <div id="chat-messages" class="chat-messages">
+    <div class="msg bot">¡Qué ondas! 👋 Soy tu profe de programación. Pregúntame lo que quieras: qué es una variable, cómo funciona un <code>for</code>, por qué te sale un error… Te explico con calma y con ejemplos bien catrachos.</div>
+  </div>
+  <div class="chat-chips">
+    <button class="chip" data-q="¿Qué es una variable? Explícamelo con un ejemplo de una tienda.">¿Qué es una variable?</button>
+    <button class="chip" data-q="¿Cuál es la diferencia entre for y while?">for vs while</button>
+    <button class="chip" data-q="Me sale un error de sintaxis en Python, ¿cómo lo busco?">Tengo un error</button>
+  </div>
+  <div class="chat-input-row">
+    <input id="chat-input" type="text" placeholder="Escribe tu pregunta..." autocomplete="off">
+    <button id="chat-send" aria-label="Enviar"><i class="bi bi-send-fill"></i></button>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Scripts propios -->
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/tutor.js"></script>
+</body>
+</html>
